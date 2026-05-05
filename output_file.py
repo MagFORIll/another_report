@@ -2,7 +2,7 @@ import csv
 
 class OutputFile:
     @staticmethod
-    def upload_data_to_csv(new_path: str, data):
+    def upload_data_to_csv(new_path: str, data:dict):
         with open(new_path, 'w', newline='') as output_file:
             output_file = csv.writer(output_file)
             output_file.writerow(['title', 'ctr', 'retention_rate'])

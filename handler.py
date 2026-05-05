@@ -8,7 +8,7 @@ class Handler:
         return files, path
 
     @staticmethod
-    def find_files_to_work_with(args, path):
+    def find_files_to_work_with(args:list, path:str):
         try:
             filename = args.files
             temp = filename[:]
@@ -24,7 +24,7 @@ class Handler:
             print(f'Ошибка {exc}, попробуйте еще раз')
 
     @staticmethod
-    def calculating_average(file, STORAGE):
+    def calculating_average(file:str, STORAGE:dict):
         for row in file:
             if row['title'] not in STORAGE and float(row['ctr']) > 15 and float(row['retention_rate']) < 40:
                 STORAGE[row['title']] = [float(row['ctr']), float(row['retention_rate'])]

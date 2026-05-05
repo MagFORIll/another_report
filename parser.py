@@ -2,7 +2,7 @@ import argparse
 
 class Parser:
     @staticmethod
-    def starting_parser(files):
+    def starting_parser(files:list):
         parser = argparse.ArgumentParser(description='-_-')
         parser.add_argument('-f', '--files', nargs='+', type=str, default=files[0],
                             help='Entering file names for calculation')
